@@ -138,12 +138,13 @@ console.log(typeof (same)) // object тип данных объект. Озна�
 // 8. *С помощью рекурсии организовать функцию возведения числа в степень.
 //  Формат: function power(val, pow), где val – заданное число, pow – степень.
 
-const power = function (val, pow) {
+function power(val, pow) {
     if (pow != 1) {
-        return val * pow(val, pow - 1)
+        return val * power(val, pow - 1)
     } else if (pow <= 0) {
         alert('Степень должна быть больше 0')
     } else {
         return val
     }
 }
+console.log(power(3, 3))
